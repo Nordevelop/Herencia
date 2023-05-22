@@ -1,4 +1,6 @@
 package misClases;
+import java.util.io.BufferedReader;
+import java.util.FormatFlagsConversionMismatchException;
 
 public class Persona {
 	private String nombre;
