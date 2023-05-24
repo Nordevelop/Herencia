@@ -1,4 +1,4 @@
-public class Directorio extends Persona{
+public class Directorio extends Empleado{
   private String presidente;
   private String ceo;
   private String gerente;
