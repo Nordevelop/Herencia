@@ -1,27 +1,43 @@
 package misClases;
-import java.util.*;
-public class Empleado extends Persona{
-  public Empleado(String nombre, double sueldo) {
-		super(nombre);
-	}
-	private int legajo;
-	private double sueldo;
-	public int getLegajo() {
-		return legajo;
-	}
-	public void setLegajo(int legajo) {
-		this.legajo = legajo;
-	}
-	public double getSueldo() {
-		return sueldo;
-	}
-	public void setSueldo(double sueldo) {
-		this.sueldo = sueldo;
-	}
-	
-	
-	
-	
 
-}
-  
+public class Empleado extends Persona{
+    private int idEmpleado;
+    private double sueldo;
+    private static int contadorEmpleado;
+
+    public Empleado(String nombre, char genero, int edad, String direccion, double sueldo) {//metodo constructor con parametros
+        super(nombre,genero, edad, direccion);
+        this.idEmpleado = ++Empleado.contadorEmpleado;
+        this.sueldo = sueldo;
+        this.nombre=nombre;
+        this.genero =genero;
+        this.edad=edad;
+        this.direccion=direccion;
+    }
+    /*Metodos
+     *Getter & Setter no me gustan nada!
+     *son necesarios en patrones de diseño :)!
+     */
+    public int getIdEmpleado() {
+        return this.idEmpleado;
+    }
+
+    public double getSueldo() {
+        return sueldo;
+    }
+
+    public void setSueldo(double sueldo) {
+        this.sueldo = sueldo;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Empleado{idEmpleado=").append(this.idEmpleado);
+        sb.append(", sueldo=").append(this.sueldo);
+        sb.append(", ").append(super.toString());
+        sb.append('}');
+        return sb.toString();
+    }
+
+ 
