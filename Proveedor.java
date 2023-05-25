@@ -23,6 +23,19 @@ public class Proveedor extends Persona{
     public void registro(Date registro) {
         this.registro = Registro;
     }
+  public int getCuit() {
+        return cuit;
+    }
+
+    public void setCuit(int cuit) {
+        this.cuit=cuit;
+    }
+  public String getRazonsocial(){
+     return razonsocial;
+  }
+  public void setRazonsocial(String razonsocial){
+      this.razonsocial=razonsocial;
+  }
   
   
   
