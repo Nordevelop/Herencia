@@ -3,17 +3,18 @@ import java.util.Date;
 
 public class Proveedor extends Persona{
 	
-	private int idProveedor;
-	private Date registro;
-	private int cuit;
-	private String razonsocial;
-	private static int contadorProveedor;
+	protected int idProveedor;
+	protected Date registro;
+	protected int cuit;
+	protected String razonsocial;
+	protected static int contadorProveedor;
 	  
-	public Proveedor(Date registro,int cuit, String razonsocial, String direccion){//metodo constructor
-	     super(direccion);
+	public Proveedor(Date registro,int cuit, String razonsocial,String nombre, String direccion){//metodo constructor
+	     super(nombre,direccion);
 	     this.idProveedor = ++Proveedor.contadorProveedor;
 	     this.registro = registro;
 	    this.cuit = cuit;
+	    this.razonsocial=razonsocial;
 	  }
 	  /*Metodos 
 	   * Getters y Setters
