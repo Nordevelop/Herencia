@@ -56,8 +56,4 @@ public class Proveedor extends Persona{
 		     return sb.toString();
 		}
 		
-		
-			
-			
-		}
-	
+}
