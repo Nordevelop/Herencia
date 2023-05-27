@@ -36,6 +36,8 @@ public class Empleado extends Persona{
         sb.append('}');
         return sb.toString();
     }
+    
+}    
 
     
 
