@@ -14,19 +14,13 @@ public class Director extends Empleado {
 			 * sueldo es objeto de la clase Empleado
 			 * categoria es objeto de la clase Director
 			 */
-			}
-	 
-
+			}//fin metodo constructor
 	  		public String getCategoria() {
 	  			return categoria;
 	  		}
-
-
 	  		public void setCategoria(String categoria) {
 	  			this.categoria = categoria;
 	  		}
-
-
 	  		public String toString() {
 	  			StringBuilder sb = new StringBuilder();
 	  			sb.append("categoria = ").append(categoria);
@@ -35,8 +29,4 @@ public class Director extends Empleado {
 	  			return sb.toString();
 	  		}
 	  
-
-	
-
 }
-
