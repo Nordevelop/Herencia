@@ -1,63 +1,81 @@
 package misClases;
 import java.util.io.BufferedReader;
 import java.util.FormatFlagsConversionMismatchException;
+public class Persona{
+    protected String nombre;
+    protected char genero;
+    protected int edad;
+    protected String direccion;
+    /*en las clases derivadas no hace 
+     * falta metodo ToString para los objetos
+     * de esta clase, solo la llamada a Super()    */
+    
+    public Persona(){
+        
+    }
+    
+    public Persona(String nombre,String direccion){
+        this.nombre = nombre;
+        this.direccion=direccion;
+    }
 
-public class Persona {
-	private String nombre;
-	private char genero;
-	private int edad;
-	private String calle;
-	private int altura;
-	private String localidad;
-		public Persona(String nombre) {
-		// TODO Apéndice de constructor generado automáticamente
-	}
-  //Getters & Setters
-  //(:/cuac!! no me gustan
-  /*
-   *Hay que aprenderlos x los patrones de diseño
-   */
+    public Persona(String nombre, char genero, int edad, String direccion) {
+        this.nombre = nombre;
+        this.genero = genero;
+        this.edad = edad;
+        this.direccion = direccion;
+    }
 
-	public String getNombre() {
-		return nombre;
-	}
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-	public char getGenero() {
-		return genero;
-	}
-	public void setGenero(char genero) {
-		this.genero = genero;
-	}
-	public int getEdad() {
-		return edad;
-	}
-	public void setEdad(int edad) {
-		this.edad = edad;
-	}
-	public String getCalle() {
-		return calle;
-	}
-	public void setCalle(String calle) {
-		this.calle = calle;
-	}
-	public int getAltura() {
-		return altura;
-	}
-	public void setAltura(int altura) {
-		this.altura = altura;
-	}
-	public String getLocalidad() {
-		return localidad;
-	}
-	public void setLocalidad(String localidad) {
-		this.localidad = localidad;
-	}
-	@Override
-	public String toString() {
-		return "Persona [nombre=" + nombre + ", genero=" + genero + ", edad=" + edad + ", calle=" + calle + ", altura="
-				+ altura + ", localidad=" + localidad + "]";
-	}
+    public String getDireccion() {
+        return this.direccion;
+    }
 
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public String getNombre() {
+        return this.nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public char getGenero() {
+        return this.genero;
+    }
+
+    public void setGenero(char genero) {
+        this.genero = genero;
+    }
+
+    public int getEdad() {
+        return this.edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Persona{nombre=").append(nombre);
+        sb.append(", genero=").append(genero);
+        sb.append(", edad=").append(edad);
+        sb.append(", direccion=").append(direccion);
+        sb.append(", ").append(super.toString());
+        sb.append('}');
+        return sb.toString();
+    }
+
+   
+    
+    
+    
+    
+    
 }
+
+
