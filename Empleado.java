@@ -1,11 +1,11 @@
 package misClases;
 
 public class Empleado extends Persona{
-    private int idEmpleado;
-    private double sueldo;
-    private static int contadorEmpleado;
+    protected int idEmpleado;
+    protected double sueldo;
+    protected static int contadorEmpleado;
 
-    public Empleado(String nombre, char genero, int edad, String direccion, double sueldo) {//metodo constructor con parametros
+    public Empleado(String nombre, char genero, int edad, String direccion, double sueldo) {
         super(nombre,genero, edad, direccion);
         this.idEmpleado = ++Empleado.contadorEmpleado;
         this.sueldo = sueldo;
@@ -14,10 +14,7 @@ public class Empleado extends Persona{
         this.edad=edad;
         this.direccion=direccion;
     }
-    /*Metodos
-     *Getter & Setter no me gustan nada!
-     *son necesarios en patrones de diseño :)!
-     */
+
     public int getIdEmpleado() {
         return this.idEmpleado;
     }
@@ -39,5 +36,7 @@ public class Empleado extends Persona{
         sb.append('}');
         return sb.toString();
     }
+
+    
 
  
