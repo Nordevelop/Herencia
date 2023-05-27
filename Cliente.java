@@ -3,23 +3,19 @@ package misClases;
 import java.util.Date;
 
 public class Cliente extends Persona{
-    /*Propiedades de la clase Cliente
-     * con modificador de acceso Private
-     */
-    private int idCliente;
-    private Date fechaRegistro;
-    private boolean vip;
-    private static int contadorCliente;
+    protected int idCliente;
+    protected Date fechaRegistro;
+    protected boolean vip;
+    protected static int contadorCliente;
     
-    public Cliente(Date fechaRegistro, boolean vip, String nombre, char genero, int edad, String direccion){ //metodo Constructor Cliente
+    public Cliente(Date fechaRegistro, boolean vip, String nombre, 
+            char genero, int edad, String direccion){
         super(nombre, genero, edad, direccion);
         this.idCliente = ++Cliente.contadorCliente;
         this.fechaRegistro = fechaRegistro;
         this.vip = vip;
     }
-    /*Metodos 
-     *  Getters & Setters
-     */
+
     public int getIdCliente() {
         return idCliente;
     }
@@ -31,9 +27,6 @@ public class Cliente extends Persona{
     public void setFechaRegistro(Date fechaRegistro) {
         this.fechaRegistro = fechaRegistro;
     }
-     /*Metodos 
-     *  Boolean
-     */
 
     public boolean isVip() {
         return vip;
@@ -42,9 +35,7 @@ public class Cliente extends Persona{
     public void setVip(boolean vip) {
         this.vip = vip;
     }
-   /*Metodo
-    *  mostrar en pantalla los objetos de la clase Cliente
-    */
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -59,3 +50,5 @@ public class Cliente extends Persona{
     
     
 }
+
+
